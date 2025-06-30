@@ -1,0 +1,69 @@
+Repeat and Missing Number Array
+
+## time complexity: O(n)
+## space complexity: O(1)
+
+class Solution:
+    # @param A : tuple of integers
+    # @return a list of integers
+    def repeatedNumber(self, A):
+        xor1 = A[0]
+        n = len(A)
+        
+        # Get the XOR of all the array elements
+        for i in range(1, n):
+            xor1 = xor1 ^ A[i]
+            
+        # Get the XOR of all the numbers until n
+        for i in range(1, n + 1):
+            xor1 = xor1 ^ i
+            
+        # xor1 now contains the XOR of the missing and repeated numbers
+
+        # Find the rightmost set bit in xor1
+        set_bit = xor1 & ~(xor1 - 1)
+
+        # Initialize variables to hold two distinct groups
+        x = 0  # Will hold one unique number (either missing or repeated)
+        y = 0  # Will hold the other unique number
+
+        # Divide elements into two groups and get the XOR of these groups
+        for i in range(n):
+            if A[i] & set_bit:
+                x = x ^ A[i]
+            else:
+                y = y ^ A[i]
+
+        for i in range(1, n + 1):
+            if i & set_bit:
+                x = x ^ i
+            else:
+                y = y ^ i
+
+        # Check which one is the missing number
+        if x in A:
+            return [x, y]
+        else:
+            return [y, x]
+
+
+
+
+Duplicate Element in an Array(1:31:42 - 2:38:22)
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        tortoise = hare = nums[0]
+        while True:
+            tortoise = nums[tortoise]
+            hare = nums[nums[hare]]
+            if tortoise == hare:
+                break
+
+        # Phase 2: Finding the entrance to the cycle.
+        tortoise = nums[0]
+        while tortoise != hare:
+            tortoise = nums[tortoise]
+            hare = nums[hare]
+
+    return hare
