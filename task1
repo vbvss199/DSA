@@ -1,0 +1,11 @@
+ok buddy homework is to get gud at flutter.
+
+grind some leetcodes and when you get bored with basic language features, 
+move to flutter and learn Cubit (a lightweight version of Bloc) and basic Stateful Widgets using setState()
+
+recommend making your own project and then figure out how to fetch & show random trump tweets or some bullshit with those state management tools.
+
+
+Fluteer (cubit):
+just like javascript for the react=> dart for the flutter 
+WIDGETS : which are the building blocks of Flutter app's User Interface .
