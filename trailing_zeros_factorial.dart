@@ -1,29 +1,36 @@
+// for the 20! it has 20 digits in it so it wont be able to store it ,integer has no capacity to store it 
+// better try with
 class Solution {
   int trailingZeroes(int n) {
     //implement logic here
+    // int count=0;
+    // while(n%10==0){
+    //   count=count+1;
+    //   n= n~/10;
+    // }
+    // return count;
     int count=0;
-    while(n%10==0){
-      count=count+1;
-      n= n~/10;
+    for(int i=5;i<=n;i=i*5){
+      count=count+n~/i;
     }
     return count;
   }
 }
 
-int fact(int n){
-  if( n==0 || n==1){
-    return 1;
-  }
-  else{
-    return n*fact(n-1);
-  }
-}
+// int fact(int n){
+//   if( n==0 || n==1){
+//     return 1;
+//   }
+//   else{
+//     return n*fact(n-1);
+//   }
+// }
 void main() {
   final solution = Solution();
 
   // Define a fixed number instead of reading from stdin
-  final int n = 10;  // you can change this to any value you like
-  final result = solution.trailingZeroes(fact(n));
+  final int n = 100;  // you can change this to any value you like
+  final result = solution.trailingZeroes(n);
   print('Number of trailing zeros in ${n}! is $result');
 }
 
