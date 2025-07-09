@@ -29,3 +29,7 @@ class Solution:
 
 #driver code 
 print(Solution().repeatedNumber([3, 1, 3, 4, 2]))
+
+# the other way of logic is to create a map DS and assign keys with the numbers and the values with their count 
+# iterate over keys and values to find the missing and repeated elements where the space complexity using this approach is O(n)
+#O(1) space and O(n) time ? 

@@ -13,20 +13,23 @@
 
 // start with finding the mid using the start and end indices with the optimized one for finding the mid element
 
+// 1st call
 class Solution {
-  List<int> sortArray(List<int> nums,int start,int end) {
+  List<int> sortArray(List<int> nums, int start, int end) {
     // using merge sort
     mergeSort(nums, start, end);
     return nums;
   }
 }
 
+// 3rd call
+
 // 2nd step
 void merge(List<int> arr, int start, int end, int mid) {
   List<int> temp = [];
   int i = start;
   int j = mid + 1;
-  while (i <= mid && j <=end) {
+  while (i <= mid && j <= end) {
     if (arr[i] <= arr[j]) {
       temp.add(arr[i]);
       i++;
@@ -42,13 +45,14 @@ void merge(List<int> arr, int start, int end, int mid) {
   }
   while (j <= end) {
     temp.add(arr[j]);
-  j++;
+    j++;
   }
   for (int idx = 0; idx < temp.length; idx++) {
     arr[start + idx] = temp[idx];
   }
 }
 
+// 2nd call
 // 1st step
 void mergeSort(List<int> arr, int start, int end) {
   if (start < end) {
@@ -66,7 +70,7 @@ void main() {
   List<int> nums = [5, 2, 3, 1];
 
   // Call the sortArray method
-  List<int> sorted = solution.sortArray(nums,0,nums.length-1);
+  List<int> sorted = solution.sortArray(nums, 0, nums.length - 1);
 
   // Print the result
   print('Sorted array: $sorted');
