@@ -2,7 +2,7 @@ void main() {
   List<int> arr = [10, 7, 8, 9, 1, 5];
   int n = arr.length;
 
-  quickSort(arr, 0, n - 1); // Call to your quick sort implementation
+  quickSort(arr, 0, n - 1);
 
   print("Sorted array is: $arr");
 }
