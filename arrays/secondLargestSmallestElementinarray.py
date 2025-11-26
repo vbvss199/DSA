@@ -36,3 +36,5 @@ if __name__ == "__main__":
     x = sol.secondLargestSmallestElement(nums, n)
     x
     # [1,2,4,7,7,5]
+
+# solve the largest element in an array in the similar way with O(n) time complexity
