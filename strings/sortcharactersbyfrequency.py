@@ -7,6 +7,7 @@ class Solution:
         # {'t':1,'r':1,'e':2}=>[('t',1),('r',1),('e',2)]
         # sorted is applied for the list
         # When comparing two items, don’t compare the whole tuple —instead, compare only the result of something
+        # mpp.items returns a iterable list which are tuples
         sorted_chars = sorted(mpp.items(), key=lambda x: x[1], reverse=True)
         # now the list is [('e',2),('t',1),('r',1)]
         # we need to join this list
