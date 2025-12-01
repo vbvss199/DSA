@@ -20,6 +20,14 @@ if __name__ == "__main__":
     tests = [
         [1, 1, 0, 1, 1, 1],
         [1, 0, 1, 1, 0, 1],
+        [],  # empty array
+        [1, 1, 1, 1, 1],  # all ones
+        [0, 0, 0, 0],  # all zeros
+        [1],  # single one
+        [0],  # single zero
+        [1, 0, 1, 0, 1, 0, 1],  # alternating
+        [0, 1, 1, 1, 0, 1, 1],  # multiple runs
+        [1] * 20 + [0] + [1] * 5,  # long run then shorter run
     ]
     for test in tests:
         print(f"{test}->{sol.findMaxConsecutiveOnes(test)}")
