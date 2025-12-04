@@ -10,6 +10,7 @@ class Solution:
             prefixsum = prefixsum + nums[i]
             # check if there exists any other exists like in the map then again add the sum with the difference of the indices
             # now check the second condition for the remaining sum -k
+            # fucked up with the solution needs a review for this question again.
             if prefixsum - k in presummap:
                 count += presummap[prefixsum - k]
             if prefixsum in presummap:
