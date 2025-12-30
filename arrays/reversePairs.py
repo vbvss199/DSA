@@ -35,6 +35,7 @@ class Solution:
             mid = (start + end) // 2
             self.mergeSort(nums, start, mid)
             self.mergeSort(nums, mid + 1, end)
+            # immediately after the execution is done in above both calls it returns the in place array sorted and the merge will be done after the count pairs 
             self.countPairs(nums, start, mid, end)
             self.merge(nums, start, mid, end)
 
