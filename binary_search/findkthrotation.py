@@ -20,3 +20,15 @@ class Solution:
                 high = mid - 1
 
         return min_idx
+
+
+if __name__ == "__main__":
+    s = Solution()
+    tests = [
+        [15, 18, 2, 3, 6, 12],
+        [7, 9, 11, 12, 5],
+        [1, 2, 3, 4, 5],
+        [],
+    ]
+    for arr in tests:
+        print(arr, "-> rotation index:", s.findKRotation(arr))
