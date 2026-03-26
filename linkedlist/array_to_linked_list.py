@@ -21,7 +21,7 @@ def print_list(head_node):
     while current is not None:
         print(current.data, end="->")
         current = current.next
-    print("None")
+    print("None") 
 
 
 if __name__ == "__main__":
