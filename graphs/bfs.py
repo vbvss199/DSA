@@ -10,7 +10,6 @@ class Solution:
         visited.add(0)
 
         output = []
-
         while queue:
             # pop the node out of it
             node = queue.popleft()
