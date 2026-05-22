@@ -9,7 +9,7 @@ class Solution:
         visited = set()
         visited.add(0)
 
-        output = []
+        output = []  #!
         while queue:
             # pop the node out of it
             node = queue.popleft()
